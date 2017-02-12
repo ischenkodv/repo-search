@@ -1,0 +1,31 @@
+; top-most EditorConfig file
+root = true
+
+; Unix-style newlines
+[*]
+end_of_line = LF
+
+; 4 space indentation
+[*.js]
+indent_style = space
+indent_size = 2
+[*.jsx]
+indent_style = space
+indent_size = 2
+
+; 4 space indentation
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*.yml]
+indent_style = space
+indent_size = 2
+
+[*.scss]
+indent_style = space
+indent_size = 2
+
+[*.html]
+indent_style = space
+indent_size = 2
