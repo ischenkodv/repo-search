@@ -30,7 +30,7 @@
     "html-webpack-plugin": "^2.22.0",
     "jest": "^18.1.0",
     "react-addons-test-utils": "^15.3.2",
-    "react-test-renderer": "^15.3.2",
+    "react-test-renderer": "^15.4.2",
     "redux-mock-store": "^1.2.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"

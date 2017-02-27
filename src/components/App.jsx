@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { search } from '../actions/search';
 import RepoList from './RepoList'
 import SearchForm from './SearchForm'
 
-class App extends React.Component {
+export class App extends React.Component {
 
   constructor() {
     super();
@@ -45,7 +45,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <div className="wrapper">
-          <SearchForm onSubmit={ this.search } disabled={this.props.loading } />
+          <SearchForm onSubmit={ this.search } disabled={ this.props.loading } />
           <div className="search-results row">
             <div className="col-xs-12">
               { queryBlock }
@@ -58,9 +58,18 @@ class App extends React.Component {
   }
 }
 
+App.propTypes = {
+  loading: PropTypes.bool,
+  query: PropTypes.string,
+  repositories: PropTypes.array,
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+  }),
+}
+
 function mapStateToProps(state) {
   return {
-    loading: state.search.loading,
+    loading: Boolean(state.search.loading),
     query: state.search.query,
     repositories: state.search.repositories,
     error: state.search.error

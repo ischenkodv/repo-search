@@ -11,7 +11,7 @@ class SearchForm extends React.Component {
   submit(e) {
     e.preventDefault();
 
-    if (typeof this.props.onSubmit === 'function') {
+    if (!this.props.disabled && typeof this.props.onSubmit === 'function') {
       this.props.onSubmit(this.refs.query.value.trim());
     }
   }

@@ -1,0 +1,43 @@
+exports[`test SearchForm can render the form with disabled search input 1`] = `
+<form
+  className="form-inline"
+  onSubmit={[Function]}>
+  <div
+    className="form-group">
+    <input
+      className="form-control"
+      name="query"
+      placeholder="Enter user name"
+      type="text" />
+    <button
+      className="btn btn-primary"
+      disabled={true}
+      name="search"
+      type="submit">
+      Search
+    </button>
+  </div>
+</form>
+`;
+
+exports[`test SearchForm component renders the form correctly 1`] = `
+<form
+  className="form-inline"
+  onSubmit={[Function]}>
+  <div
+    className="form-group">
+    <input
+      className="form-control"
+      name="query"
+      placeholder="Enter user name"
+      type="text" />
+    <button
+      className="btn btn-primary"
+      disabled={false}
+      name="search"
+      type="submit">
+      Search
+    </button>
+  </div>
+</form>
+`;

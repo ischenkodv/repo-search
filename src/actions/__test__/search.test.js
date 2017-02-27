@@ -3,7 +3,6 @@ import thunk from 'redux-thunk';
 import * as actions from '../search';
 import { search, searchRepoStarted, searchRepoSuccess, searchRepoFailure } from '../search';
 import { RequestError } from '../../errors';
-import nock from 'nock';
 import fetchMock from 'fetch-mock';
 
 const middlewares = [ thunk ];

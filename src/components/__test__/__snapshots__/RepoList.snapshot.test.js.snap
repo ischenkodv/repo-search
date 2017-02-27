@@ -1,0 +1,29 @@
+exports[`test RepoList renders the list of repositories 1`] = `
+<ul
+  className="list-group">
+  <li
+    className="list-group-item">
+    <a
+      href="https://example.com/test1"
+      target="_blank">
+      test 1
+    </a>
+  </li>
+  <li
+    className="list-group-item">
+    <a
+      href="https://example.com/test2"
+      target="_blank">
+      test 2
+    </a>
+  </li>
+  <li
+    className="list-group-item">
+    <a
+      href="https://example.com/test3"
+      target="_blank">
+      test 3
+    </a>
+  </li>
+</ul>
+`;
