@@ -35,7 +35,7 @@ export class App extends React.Component {
           contentBlock = <RepoList repositories={ repositories } />
           queryBlock = <h3>Repositories of <em>{ this.props.query }</em>:</h3>
         } else {
-          contentBlock = <p>User <em>{ this.props.query }</em> has no repositories</p>
+          contentBlock = <p className="help-block">User <em>{ this.props.query }</em> has no repositories</p>
           queryBlock = null;
         }
 
