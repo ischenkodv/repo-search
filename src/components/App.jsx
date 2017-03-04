@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { search } from '../actions/search';
 import RepoList from './RepoList'
 import SearchForm from './SearchForm'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export class App extends React.Component {
 
@@ -43,17 +44,19 @@ export class App extends React.Component {
     }
 
     return (
-      <div className="container">
-        <div className="wrapper">
-          <SearchForm onSubmit={ this.search } disabled={ this.props.loading } />
-          <div className="search-results row">
-            <div className="col-xs-12">
-              { queryBlock }
-              { contentBlock }
+      <MuiThemeProvider>
+        <div className="container">
+          <div className="wrapper">
+            <SearchForm onSubmit={ this.search } disabled={ this.props.loading } />
+            <div className="search-results row">
+              <div className="col-xs-12">
+                { queryBlock }
+                { contentBlock }
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </MuiThemeProvider>
     )
   }
 }

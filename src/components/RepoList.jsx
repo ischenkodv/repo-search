@@ -1,19 +1,32 @@
 import React from 'react';
+import {List, ListItem} from 'material-ui/List';
+import CodeIcon from 'material-ui/svg-icons/action/code';
+import { deepPurple800, cyan800 } from 'material-ui/styles/colors';
+
  
 class RepoList extends React.Component {
+
+  gotoRepo(repository) {
+    window.open(repository.html_url);
+  }
+
   render() {
     if (!Array.isArray(this.props.repositories)) {
       return null;
     }
 
     return (
-      <ul className="list-group">{
+      <List>{
         this.props.repositories.map(repository => {
-          return <li key={ 'repo_' + repository.name } className="list-group-item">
-            <a href={repository.html_url} target="_blank">{ repository.name }</a>
-          </li>
+          return <ListItem
+            key={ 'repo_' + repository.name }
+            leftIcon={<CodeIcon color={ cyan800 } />}
+            primaryText={ repository.name }
+            secondaryText={ repository.description }
+            onClick={ () => { this.gotoRepo(repository); }}
+          ></ListItem>
         })
-      }</ul>
+      }</List>
     );
   }
 }
