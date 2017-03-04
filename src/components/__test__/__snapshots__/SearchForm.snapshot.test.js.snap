@@ -6,6 +6,7 @@ exports[`test SearchForm can render the form with disabled search input 1`] = `
     className="form-group">
     <input
       className="form-control"
+      disabled={true}
       name="query"
       placeholder="Enter user name"
       type="text" />
@@ -28,6 +29,7 @@ exports[`test SearchForm component renders the form correctly 1`] = `
     className="form-group">
     <input
       className="form-control"
+      disabled={false}
       name="query"
       placeholder="Enter user name"
       type="text" />

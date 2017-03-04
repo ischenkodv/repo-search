@@ -10,6 +10,7 @@ exports[`test App shows form and empty list of repositories 1`] = `
         className="form-group">
         <input
           className="form-control"
+          disabled={undefined}
           name="query"
           placeholder="Enter user name"
           type="text" />
@@ -48,6 +49,7 @@ exports[`test App shows form with query 1`] = `
         className="form-group">
         <input
           className="form-control"
+          disabled={undefined}
           name="query"
           placeholder="Enter user name"
           type="text" />

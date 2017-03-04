@@ -20,7 +20,7 @@ class SearchForm extends React.Component {
     return (
       <form className="form-inline" onSubmit={ this.submit }>
         <div className="form-group">
-          <input type="text" name="query" ref="query" className="form-control" placeholder="Enter user name" />
+          <input type="text" name="query" ref="query" className="form-control" placeholder="Enter user name" disabled={ this.props.disabled } />
           <button type="submit" className="btn btn-primary" name="search" disabled={ this.props.disabled }>Search</button>
         </div>
       </form>
